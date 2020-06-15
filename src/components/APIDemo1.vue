@@ -21,6 +21,14 @@
           <p :class="{active:isActive,'text-danger':hasError}">hello</p>
           <button @click="changeISActive">修改</button>
         </div>
+        <div>
+          <p class="s1" :class="[c1,c2]">我是样式</p>
+          <p class="s2" :class="[isActive ? 'active' :'',c1]">我是样式2</p>
+          <p class="s3" :class="[isActive ? '' :'active',{'text-danger':hasError},c2]">我是样式3</p>
+        </div>
+        <div>
+          <p :style="{color:'green',fontSize:'30px'}">style1</p>
+        </div>
     </div>
 </template>
 <script>
@@ -37,7 +45,9 @@ export default {
             },
             msg:"hello",
             isActive:true,
-            hasError:true
+            hasError:true,
+            c1:"s1",
+            c2:'s2'
         }
     },
     methods:{
@@ -48,7 +58,7 @@ export default {
             this.names.push("lbh");
         },
         addobj(){
-            this.$set(this.obj,"zhaoyun","男");
+            this.$set(this.obj,"sex","男");
         },
         changeISActive(){
           this.isActive = !this.isActive;
@@ -61,3 +71,10 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+  .active{
+    color: red;
+  }
+
+</style>

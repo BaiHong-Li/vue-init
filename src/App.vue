@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <APIDemo1/>
+    <APIDemo2/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import APIDemo1 from './components/APIDemo1'
+import APIDemo2 from './components/APIDemo2'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    APIDemo1
+    APIDemo1,
+    APIDemo2
   }
 }
 </script>
