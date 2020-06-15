@@ -1,9 +1,14 @@
 <template>
   <div>
-    <input class="text" v-model="msg">
+    <textarea v-model="msg"></textarea>
     <p>{{msg}}</p>
-    <input type="checkbox" v-model="checked">
-    <p>{{checked}}</p>
+    <input type="checkbox" id="jack" value="Jack" v-model="checkeds">
+    <input type="checkbox" id="john" value="John" v-model="checkeds">
+    <input type="checkbox" id="mike" value="Mike" v-model="checkeds">
+    <p>{{checkeds}}</p>
+    <ul>
+      <li v-for="(item,index) in checkeds" :key="index">{{item}}</li>
+    </ul>
   </div>
 </template>
 
@@ -13,7 +18,7 @@
       data(){
         return{
           msg:"",
-          checked:true
+          checkeds:[]
         }
       }
     }
