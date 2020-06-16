@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <APIDemo2/>
+    <ul>
+      <li v-for="(item,index) in names" :key="index">
+        <MyComponent :name="item"/>
+      </li>
+    </ul>
+    <MyComponent2 title="name":age="20":friends="fs"></MyComponent2>
+
   </div>
 </template>
 
@@ -8,13 +14,23 @@
 import HelloWorld from './components/HelloWorld'
 import APIDemo1 from './components/APIDemo1'
 import APIDemo2 from './components/APIDemo2'
+import MyComponent from './components/MyComponent'
+import MyComponent2 from './components/MyComponent2'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     APIDemo1,
-    APIDemo2
+    APIDemo2,
+    MyComponent,
+    MyComponent2
+  },
+  data(){
+    return{
+      names:["iwen","ime","frank"],
+      fs:["18","19","20"]
+    }
   }
 }
 </script>
