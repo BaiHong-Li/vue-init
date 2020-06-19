@@ -7,6 +7,7 @@
     </ul>
     <MyComponent2 title="name":age="20":friends="fs"></MyComponent2>
 
+    <HelloWorld2></HelloWorld2>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import APIDemo1 from './components/APIDemo1'
 import APIDemo2 from './components/APIDemo2'
 import MyComponent from './components/MyComponent'
 import MyComponent2 from './components/MyComponent2'
+import HelloWorld2 from "./components/HelloWorld2";
 
 export default {
   name: 'App',
@@ -24,7 +26,8 @@ export default {
     APIDemo1,
     APIDemo2,
     MyComponent,
-    MyComponent2
+    MyComponent2,
+    HelloWorld2
   },
   data(){
     return{
